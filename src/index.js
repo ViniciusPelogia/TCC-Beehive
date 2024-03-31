@@ -1,8 +1,8 @@
 import express from "express";
-import conectaNoBanco from "./config/db/configDB";
+import conectaNoBanco from "./config/db/configDB.js";
 
 //Conexão com Banco de Dados
-const conexao = await conectaNaDataBase()
+const conexao = await conectaNoBanco()
 
 conexao.on("error", (erro) =>{
     console.error("erro de conexão", erro)
