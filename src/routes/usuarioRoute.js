@@ -1,11 +1,13 @@
 const { Router } = require('express');
-import { UsuarioController } from '../controllers/usuarioController.js';
+const UsuarioController = require('../controllers/usuarioController.js');
 
 const router = Router();
 
 router
     .get('/usuarios', UsuarioController.pegaUsuarios)
     .get('/usuarios/:id')
-    .post('/usuarios')
+    .post('/usuarios', UsuarioController.cadastrarUsuario)
     .put('/usuarios/:id')
     .delete('/usuarios/:id')
+
+module.exports = router;
